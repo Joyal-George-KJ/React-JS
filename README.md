@@ -51,8 +51,7 @@ Your feedback and suggestions are invaluable! Feel free to open an issue or crea
 
 ## 📩 Connect  
 Follow my journey and share your insights:  
-- LinkedIn: [Your LinkedIn Profile](#)  
-- Twitter: [Your Twitter Profile](#)  
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/joyalgeorgekj/)  
 
 Let’s grow together! 🌱  
 

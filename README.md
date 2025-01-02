@@ -9,8 +9,7 @@ This repository serves as a record of my progress as I start from scratch and wo
 ## 📚 What’s Inside  
 - **Daily Learning Modules**: Step-by-step tasks to build a solid React.js foundation.  
 - **Mini-Projects**: Hands-on exercises to apply concepts in real-world scenarios.  
-- **Notes & Insights**: Key takeaways and resources from each learning day.  
-- **Progress Tracker**: Milestones and achievements to celebrate along the way.  
+- **Assignments**: Key takeaways and resources from each learning day.   
 
 ---
 
@@ -23,7 +22,7 @@ This repository serves as a record of my progress as I start from scratch and wo
 ---
 
 ## 🚀 Current Status  
-- **Day 2**: Starting from scratch after a three-month break, focused on rebuilding my programming skills.  
+- **Noob**: Starting from scratch after a three-month break, focused on rebuilding my programming skills.  
 
 ---
 
@@ -33,6 +32,7 @@ This repository serves as a record of my progress as I start from scratch and wo
 - **HTML & CSS**  
 - **ChatGPT**: Providing tasks, assignments, and guidance.  
 - Additional learning resources as needed.  
+- **Git & GitHub**  
 
 ---
 

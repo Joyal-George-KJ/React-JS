@@ -18,3 +18,25 @@ const updateFunc = debounce((text) => (elmtDebounce.textContent = text));
 inp.addEventListener("input", (e) => {
     updateFunc(e.target.value);
 });
+
+// Throttle Assignment
+
+const throttle = (cbFunc, delay) => {
+    let currTime = 0;
+
+    return (...arg) => {
+        let date = new Date().getTime();
+        
+        if (date - currTime >= delay) {
+            currTime = date;
+            cbFunc(arg);
+        }
+    }
+}
+
+const throttleDowned = throttle((element) => {console.log("Pressed", element)}, 1000);
+
+elmtthrottle.addEventListener('click', (e) => {
+    
+    throttleDowned(e.target);
+})

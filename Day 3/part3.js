@@ -33,6 +33,3 @@ const iterator = iteratorFunc({
 });
 
 iterator.next();
-iterator.next();
-iterator.next();
-iterator.next();

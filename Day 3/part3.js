@@ -14,17 +14,24 @@ const nestedObjectIterate = (obj) => {
 };
 
 const iteratorFunc = (value) => {
+    let obj = value;
     let indicator = 0; // checks if value is Array or Object
 
     return {
-        next: () => {
-            if (value instanceof Array) {
-                console.log(value[indicator++]);
+        next: (...arg) => {
+            if (obj instanceof Array) {
+                console.log(obj[indicator]);
             } else {
-                let currObject = value[Object.keys(value)[indicator++]];
-                // console.log(currObject);
-                nestedObjectIterate(currObject);
+                let currObject = obj[Object.keys(obj)[indicator]];
+                
+                if (currObject instanceof Array === false && typeof currObject === 'object') {
+                    let iterator = iteratorFunc(currObject);
+                    iterator.next();
+                } else {
+                    console.log(currObject);
+                }
             }
+            indicator++;
         },
     };
 };

@@ -1,5 +1,3 @@
-
-
 // Module Pattern Assignment
 
 const taskManager = (tasks = ["logrithm", 'Algibra', 'Arithmetics']) => {
@@ -8,7 +6,7 @@ const taskManager = (tasks = ["logrithm", 'Algibra', 'Arithmetics']) => {
             tasks.push(newTask);
         },
         removeTask: (task) => {
-            tasks.splice(tasks.indexOf(task), 1);
+            tasks.indexOf(task) !== -1 && tasks.splice(tasks.indexOf(task), 1);
         },
         displayTasks: () => {
             console.log(tasks);

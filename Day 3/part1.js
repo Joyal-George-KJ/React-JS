@@ -1,4 +1,4 @@
-const inp = document.querySelector('input');
+const inp = document.querySelector("input");
 const elmtDebounce = document.querySelector(".debounce");
 const elmtthrottle = document.querySelector(".throttle");
 
@@ -9,7 +9,7 @@ function debounce(func, delay = 1000) {
 
     return (...args) => {
         clearTimeout(timer);
-        timer = setTimeout(() =>func(args), delay);
+        timer = setTimeout(() => func(...args), delay);
     };
 }
 
@@ -22,21 +22,22 @@ inp.addEventListener("input", (e) => {
 // Throttle Assignment
 
 const throttle = (cbFunc, delay) => {
-    let currTime = 0;
+    let lastTime = 0;
 
     return (...arg) => {
-        let date = new Date().getTime();
-        
-        if (date - currTime >= delay) {
-            currTime = date;
-            cbFunc(arg);
+        let now = Date.now();
+
+        if (now - lastTime >= delay) {
+            lastTime = now;
+            cbFunc(...arg);
         }
-    }
-}
+    };
+};
 
-const throttleDowned = throttle((element) => {console.log("Pressed", element)}, 1000);
+const throttleDowned = throttle((element) => {
+    console.log("Pressed", element);
+}, 1000);
 
-elmtthrottle.addEventListener('click', (e) => {
-    
+elmtthrottle.addEventListener("click", (e) => {
     throttleDowned(e.target);
-})
+});

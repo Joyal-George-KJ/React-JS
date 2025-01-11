@@ -3,23 +3,21 @@ function* fibonacci(n) {
     let prev = 0;
     let current = 1;
 
-    yield prev;
-    yield current;
+    yield prev; // First number in Fibonacci sequence
+    if (n > 1) yield current; // Second number in Fibonacci sequence
 
-    
-    while (n - 2 > i) {
-        let res = prev + current;
+    while (i < n - 2) {
+        const next = prev + current;
         prev = current;
-        current = res;
+        current = next;
         i++;
-        console.log(i);
-        
-        yield res;
+        yield next;
     }
 }
 
-let generateFib = fibonacci(10);
+// Using the generator
+let generateFib = fibonacci(2);
 
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].forEach(element => {
-    console.log(generateFib.next());
-});
+for (const value of generateFib) {
+    console.log(value);
+}
